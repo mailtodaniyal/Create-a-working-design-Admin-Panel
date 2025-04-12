@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>304maps.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+<body>
+    <div id="public-view">
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>304maps.com</span>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="#" class="active">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#" id="admin-login-btn">Admin</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="container">
+                <h1>Community Safety Platform</h1>
+                <p>Helping communities stay informed and safe through shared knowledge and real-time updates.</p>
+                <a href="#" class="btn btn-primary pulse" id="report-btn">Make a Report</a>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="section-title">
+                <h2>How It Works</h2>
+            </div>
+            
+            <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div class="card">
+                    <i class="fas fa-map-marker-alt" style="font-size: 40px; color: var(--primary); margin-bottom: 20px;"></i>
+                    <h3>Report Incidents</h3>
+                    <p>Pinpoint locations on our interactive map to report suspicious activities or incidents in your area.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-bell" style="font-size: 40px; color: var(--primary); margin-bottom: 20px;"></i>
+                    <h3>Receive Alerts</h3>
+                    <p>Get real-time notifications about reported activities in your neighborhood or areas you frequent.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-users" style="font-size: 40px; color: var(--primary); margin-bottom: 20px;"></i>
+                    <h3>Community Verified</h3>
+                    <p>Reports are verified by community members and local authorities to ensure accuracy.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="margin: 80px auto;">
+            <div class="map-container"></div>
+            
+            <div class="section-title">
+                <h2>Recent Reports</h2>
+            </div>
+            
+            <div class="card">
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; min-width: 600px;">
+                        <thead>
+                            <tr>
+                                <th>Location</th>
+                                <th>Type</th>
+                                <th>Reported</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Downtown Area</td>
+                                <td>Suspicious Activity</td>
+                                <td>2 hours ago</td>
+                                <td><span class="badge badge-warning">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>Central Park</td>
+                                <td>Verified Incident</td>
+                                <td>5 hours ago</td>
+                                <td><span class="badge badge-danger">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>North District</td>
+                                <td>False Alarm</td>
+                                <td>1 day ago</td>
+                                <td><span class="badge badge-success">Resolved</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="margin: 80px auto;">
+            <div class="section-title">
+                <h2>Submit a Report</h2>
+            </div>
+            
+            <div class="card">
+                <form id="report-form">
+                    <div class="form-group">
+                        <label for="report-type">Report Type</label>
+                        <select id="report-type" class="form-control">
+                            <option value="">Select a report type</option>
+                            <option value="suspicious">Suspicious Activity</option>
+                            <option value="incident">Verified Incident</option>
+                            <option value="false-alarm">False Alarm</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="location-details">Location Details</label>
+                        <input type="text" id="location-details" class="form-control" placeholder="Address or landmark">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="report-description">Description</label>
+                        <textarea id="report-description" class="form-control" rows="4" placeholder="Provide details about what you observed"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="report-images">Upload Images (Optional)</label>
+                        <input type="file" id="report-images" class="form-control" multiple>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Submit Report</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>About Us</h3>
+                        <p>304maps.com is a community-driven platform dedicated to improving neighborhood safety through shared information.</p>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <a href="#">Home</a>
+                        <a href="#">Report an Incident</a>
+                        <a href="#">Safety Tips</a>
+                        <a href="#">Community Guidelines</a>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>Contact</h3>
+                        <p><i class="fas fa-envelope"></i> contact@304maps.com</p>
+                        <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="copyright">
+                    <p>&copy; 2023 304maps.com. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div id="admin-view" class="admin-panel">
+        <div class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-map-marked-alt"></i> Reports Map</a></li>
+                <li><a href="#"><i class="fas fa-list"></i> Reports List</a></li>
+                <li><a href="#"><i class="fas fa-users"></i> Users</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+        
+        <div class="admin-content">
+            <div class="admin-header">
+                <h1 class="admin-title">Dashboard</h1>
+                <div class="user-menu">
+                    <img src="https://ui-avatars.com/api/?name=Admin+User" alt="Admin User">
+                    <span>Admin User</span>
+                </div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Reports</h3>
+                    <p>1,248</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Active Reports</h3>
+                    <p>87</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Verified Today</h3>
+                    <p>14</p>
+                </div>
+                <div class="stat-card">
+                    <h3>New Users</h3>
+                    <p>32</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 style="margin-bottom: 20px;">Recent Reports</h3>
+                <div class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Location</th>
+                                <th>Type</th>
+                                <th>Reported By</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#1248</td>
+                                <td>Downtown Area</td>
+                                <td>Suspicious Activity</td>
+                                <td>user123</td>
+                                <td>2023-06-15</td>
+                                <td><span class="badge badge-warning">Pending</span></td>
+                                <td>
+                                    <button class="btn" style="padding: 5px 10px; font-size: 12px;">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#1247</td>
+                                <td>Central Park</td>
+                                <td>Verified Incident</td>
+                                <td>user456</td>
+                                <td>2023-06-15</td>
+                                <td><span class="badge badge-danger">Active</span></td>
+                                <td>
+                                    <button class="btn" style="padding: 5px 10px; font-size: 12px;">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#1246</td>
+                                <td>North District</td>
+                                <td>False Alarm</td>
+                                <td>user789</td>
+                                <td>2023-06-14</td>
+                                <td><span class="badge badge-success">Resolved</span></td>
+                                <td>
+                                    <button class="btn" style="padding: 5px 10px; font-size: 12px;">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#1245</td>
+                                <td>East Side</td>
+                                <td>Suspicious Activity</td>
+                                <td>user012</td>
+                                <td>2023-06-14</td>
+                                <td><span class="badge badge-warning">Pending</span></td>
+                                <td>
+                                    <button class="btn" style="padding: 5px 10px; font-size: 12px;">View</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="card" style="margin-top: 30px;">
+                <h3 style="margin-bottom: 20px;">Quick Actions</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    <button class="btn btn-primary"><i class="fas fa-plus"></i> Add New Report</button>
+                    <button class="btn"><i class="fas fa-filter"></i> Filter Reports</button>
+                    <button class="btn"><i class="fas fa-download"></i> Export Data</button>
+                    <button class="btn"><i class="fas fa-bell"></i> Send Notification</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="switch-view">
+        <button id="view-switch-btn" class="btn btn-primary"><i class="fas fa-exchange-alt"></i> Switch View</button>
+    </div>
+
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 style="margin-bottom: 20px;">Admin Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" required>
+                </div>
+                
+                <div class="form-group" style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me" style="display: inline; margin-left: 5px;">Remember me</label>
+                    </div>
+                    <a href="#" style="font-size: 14px;">Forgot password?</a>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
